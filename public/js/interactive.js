@@ -30,18 +30,26 @@ $(".panel-default").delegate(".btn-danger","click", function(){
 });
 
 
-$(".panel-heading").click(".day-btn", function(){
+$(".day-btn").click(function(){
 
 
 // set all buttons to "not selected" color
-$(".day-btn").css("background", "#736357").css("color", "#a8c9dd");
+$(".day-btn").removeClass("current-day");
+//$(".day-btn").css("background", "#736357").css("color", "#a8c9dd");
 // set selected button to selected colors
 
 
 //    $(this).attr('data-type');
 
 // add button when plus button is clicked
-$(this).append("<button class=\"btn btn-circle day-btn\">NUMBER</button>");
+// need to select the current day only
+
+$(this).addClass("current-day");
+
+// old way, not ideal, change class instead
+//$(this).css("background", "#a8c9dd").css("color", "#736357");
+
+$(".panel-heading").append("<button class=\"btn btn-circle day-btn\">NUMBER</button>");
 
 });
 
@@ -55,4 +63,15 @@ $(".current-day").delegate(".day-btn","click", function(){
    $(this).parent().remove();
 });
 */
+
+
+// delete selected day
+$("#day-title").click(function(){
+    alert("this will delete something eventually");
+// store value of first child in global variable
+    $(this).first().val();
+// delete appropriate day and schedule
+});
+
+
 
