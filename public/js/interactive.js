@@ -14,35 +14,38 @@ $(".btn-primary").click(function(){
    var type = $(this).attr('data-type');
    // search entire page for current-day and look inside for the type
    // info from the button select clicked
-   $('.current-day').find("." + type + "-container");
-
-//   var insert = $("span").text();
-//   console.log(insert);
-
-//var string = "'" + parent + "'";
-   
-//   var insert = $("span").find(string);
-//   console.log(insert);
-//   insert.append("<p>HELLO</p>");
-
-//   console.log(string);
-//   var search = $(parent);
-//   console.log(search);
-//   search.append("<p>HELLO</p>");
-
-//   $(".panel-body").find(".itinerary-item").append("<p>Hello</p>");
-
-//   $(string).append("<p>Hello this added to the div</p>");
-
+   console.log(type);
+   var panel = $('.current-day').find("." + type + "-container");
+   console.log(panel);
+   panel.append("<ul><p>"+ selection +"</p>" + "<button class=\"btn btn-danger btn-xs btn-circle pull-right\">x</button></ul>");
 });
 
-// button functionality for hotels
-$(".btn-danger").click(function(){
+// button functionality for schedule
+$(".panel-default").delegate(".btn-danger","click", function(){
    alert("button clicked, remove element");
    // print selection
    var selection = $("select").val();
    console.log(selection);
+   $(this).parent().remove();
+});
+
+/*
+$(".panel-heading").click(".day-btn", function(){
+
+//    $(this).attr('data-type');
+
+    $(this).append("<button class=\"btn btn-circle day-btn\"></button>);
 
 });
 
+*/
+
+/*
+// button functionality for current days
+$(".current-day").delegate(".day-btn","click", function(){
+   alert("button clicked, remove element");
+   // print selection
+   $(this).parent().remove();
+});
+*/
 
