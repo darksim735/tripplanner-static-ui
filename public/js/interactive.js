@@ -1,5 +1,9 @@
 alert("hello");
 
+
+var totaldays = $(".day-buttons > .day-btn").length;
+//alert("total buttons " + totaldays);
+
 // button functionality for hotels
 $(".btn-primary").click(function(){
    alert("button clicked");
@@ -48,8 +52,13 @@ $(this).addClass("current-day");
 });
 
 // plus button to add day
+
 $(".day-btn-add").click(function(){
-$(".day-buttons :last-child").before("<button class=\"btn btn-circle day-btn\">NUMBER</button>");
+
+    totaldays = ($(".day-buttons > .day-btn").length);
+    alert("total buttons " + totaldays);
+
+    $(".day-buttons :last-child").before("<button class=\"btn btn-circle day-btn\">"+totaldays+"</button>");
 });
 
 /*
