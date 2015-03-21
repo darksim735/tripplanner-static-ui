@@ -21,6 +21,7 @@ $(".btn-primary").click(function(){
 });
 
 // button functionality for schedule
+// delegate on parent element for existing and future events
 $(".panel-default").delegate(".btn-danger","click", function(){
    alert("button clicked, remove element");
    // print selection
@@ -29,9 +30,8 @@ $(".panel-default").delegate(".btn-danger","click", function(){
    $(this).parent().remove();
 });
 
-
-$(".day-btn").click(function(){
-
+// delegate on parent element for existing and future events
+$(".panel-heading").delegate(".day-btn","click", function(){
 
 // set all buttons to "not selected" color
 $(".day-btn").removeClass("current-day");
