@@ -35,25 +35,22 @@ $(".day-btn").click(function(){
 
 // set all buttons to "not selected" color
 $(".day-btn").removeClass("current-day");
-//$(".day-btn").css("background", "#736357").css("color", "#a8c9dd");
-// set selected button to selected colors
-
 
 //    $(this).attr('data-type');
 
 // add button when plus button is clicked
 // need to select the current day only
 
+// set selected button to selected colors
 $(this).addClass("current-day");
 
-// old way, not ideal, change class instead
-//$(this).css("background", "#a8c9dd").css("color", "#736357");
-
-$(".panel-heading").append("<button class=\"btn btn-circle day-btn\">NUMBER</button>");
 
 });
 
-
+// plus button to add day
+$(".day-btn-add").click(function(){
+$(".day-buttons :last-child").before("<button class=\"btn btn-circle day-btn\">NUMBER</button>");
+});
 
 /*
 // button functionality for current days
