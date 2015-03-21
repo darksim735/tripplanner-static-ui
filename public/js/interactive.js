@@ -29,16 +29,16 @@ $(".panel-default").delegate(".btn-danger","click", function(){
    $(this).parent().remove();
 });
 
-/*
+
 $(".panel-heading").click(".day-btn", function(){
 
 //    $(this).attr('data-type');
 
-    $(this).append("<button class=\"btn btn-circle day-btn\"></button>);
+$(this).append("<button class=\"btn btn-circle day-btn\">NUMBER</button>");
 
 });
 
-*/
+
 
 /*
 // button functionality for current days
