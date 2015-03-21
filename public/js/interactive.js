@@ -32,8 +32,15 @@ $(".panel-default").delegate(".btn-danger","click", function(){
 
 $(".panel-heading").click(".day-btn", function(){
 
+
+// set all buttons to "not selected" color
+$(".day-btn").css("background", "#736357").css("color", "#a8c9dd");
+// set selected button to selected colors
+
+
 //    $(this).attr('data-type');
 
+// add button when plus button is clicked
 $(this).append("<button class=\"btn btn-circle day-btn\">NUMBER</button>");
 
 });
